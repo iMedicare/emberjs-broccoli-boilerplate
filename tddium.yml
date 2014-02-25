@@ -1,0 +1,19 @@
+:tddium:
+  :environment:
+    'BROCCOLI_ENV': test
+
+  :headless: true
+
+  :nodejs:
+    :version: 0.11.11
+
+  :phantomjs:
+    :version: 1.9.0
+
+  :firefox: 27.0.1
+
+  :hooks:
+    :pre: npm install && npm install bower && ./node_modules/bower/bin/bower -F install && ./node_modules/broccoli-cli/bin/broccoli build ./build
+
+  :tests: 
+    - ./node_modules/testem/testem.js ci -l phantomjs,firefox

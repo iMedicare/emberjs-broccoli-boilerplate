@@ -1,0 +1,5 @@
+{
+    "framework": "qunit",
+    "cwd": "build/",
+    "test_page": "index.html"
+}
