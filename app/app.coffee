@@ -1,5 +1,5 @@
 `import fixtures_preloader from 'app/initializers/fixtures_preloader'`
-`import Resolver from 'resolver'`
+`import Resolver from 'ember/resolver'`
 
 App = Ember.Application.extend
   # LOG_ACTIVE_GENERATION: true

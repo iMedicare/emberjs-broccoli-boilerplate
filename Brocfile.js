@@ -66,7 +66,7 @@ module.exports = function (broccoli) {
   appJs = compileES6(appAndVendorTree, {
     loaderFile: 'loader.js',
     ignoredModules: [
-      'resolver'
+      'ember/resolver'
     ],
     inputFiles: [
       'app/**/*.js'
@@ -134,7 +134,7 @@ module.exports = function (broccoli) {
   testsJs = compileES6(testsJs, {
     loaderFile: 'loader.js',
     ignoredModules: [
-      'resolver'
+      'ember/resolver'
     ],
     inputFiles: [
       'app/**/*.js',
