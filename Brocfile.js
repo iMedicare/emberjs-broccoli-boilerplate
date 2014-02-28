@@ -119,12 +119,12 @@ module.exports = function (broccoli) {
   var testAppFilesToAppend = appFilesToAppend.concat([
     'qunit/qunit/qunit.js',
     'jquery-mockjax/jquery.mockjax.js',
+    'faker/dist/faker.js',
     'tests/test_helper.js'
   ]);
 
   testsTree = pickFiles(testsTree, {
     srcDir: '/',
-    files: ['*.coffee', '**/*.coffee'],
     destDir: 'tests'
   });
   testsTree = preprocess(testsTree);
