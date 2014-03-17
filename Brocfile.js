@@ -118,6 +118,7 @@ module.exports = function (broccoli) {
   var testsJs = null;
   var testAppFilesToAppend = appFilesToAppend.concat([
     'qunit/qunit/qunit.js',
+    'ember-qunit/dist/globals/main.js',
     'jquery-mockjax/jquery.mockjax.js',
     'faker/dist/faker.js',
     'tests/test_helper.js'

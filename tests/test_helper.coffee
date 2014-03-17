@@ -5,6 +5,11 @@ document.write('<div id="ember-testing-container"><div id="ember-testing"></div>
 Ember.testing = true
 $.mockjaxSettings.contentType = 'text/json'
 
+resolver = require('ember/resolver')['default'].create()
+resolver.namespace = {modulePrefix: 'app'}
+emq.setResolver(resolver)
+emq.globalize()
+
 window.startApp = require('tests/helpers/start_app')['default']
 
 Ember.keys(requirejs._eak_seen).filter((key) ->
