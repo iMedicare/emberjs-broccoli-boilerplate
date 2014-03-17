@@ -4,7 +4,7 @@
 
 Read [the introductory post](http://ampersate.com/getting-started-with-broccoli-and-emberjs).
 
-This is an internally used boilerplate used by us.
+Initially used internally by us.
 Feel free to fork and adapt it.
 Send pull requests if something is broken or one of the features is missing.
 
@@ -61,11 +61,7 @@ To build a release, use:
 ### Testing
 
 We are using QUnit to write tests.
-
-Some simple conventions:
-
-* Every feature needs an acceptance test
-* Unit test are mandatory for libraries or parts of the code with complex logic
+Improved Ember.js testing support is provided through [ember-qunit](https://github.com/rpflorence/ember-qunit) package.
 
 To run the tests change the environment to `test` and run `broccoli`:
 
@@ -82,7 +78,6 @@ From command line, you can run the tests using `testem`:
 * Deployments
 * Localization
 * Improved environments support
-* More test examples
 
 ## Thanks
 
