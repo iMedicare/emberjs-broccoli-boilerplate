@@ -21,6 +21,8 @@
     "broccoli-coffee": "0.1.0",
     "broccoli-concat": "0.0.6",
     "broccoli-less": "0.2.0",
+    "broccoli-merge-trees": "0.1.3",
+    "broccoli-bower": "0.2.0",
     "testem": "0.6.15"
   }
 }
