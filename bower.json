@@ -5,6 +5,7 @@
     "ember": "1.5.1",
     "ember-data": "1.0.0-beta.7",
     "ember-resolver": "master",
+    "loader-js": "git://github.com/stefanpenner/loader.js",
     "bootstrap": "3.1.1",
     "qunit": "1.14.0",
     "ember-qunit": "0.1.7",
