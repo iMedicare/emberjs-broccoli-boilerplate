@@ -12,15 +12,15 @@
     "url": "https://github.com/stas/emberjs-broccoli-boilerplate"
   },
   "dependencies": {
-    "broccoli": "0.4.1",
+    "broccoli": "0.9",
     "broccoli-cli": "0.0.1",
-    "broccoli-static-compiler": "0.1.2",
+    "broccoli-static-compiler": "0.1.4",
     "broccoli-uglify-js": "0.1.1",
-    "broccoli-es6-concatenator": "0.1.2",
-    "broccoli-template": "0.1.0",
+    "broccoli-es6-concatenator": "0.1.4",
+    "broccoli-template": "0.1.1",
     "broccoli-coffee": "0.1.0",
-    "broccoli-concat": "0.0.2",
-    "broccoli-less": "0.1.0",
-    "testem": "0.6.9"
+    "broccoli-concat": "0.0.6",
+    "broccoli-less": "0.2.0",
+    "testem": "0.6.15"
   }
 }
