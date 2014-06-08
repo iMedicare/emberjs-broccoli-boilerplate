@@ -4,74 +4,63 @@
 
 Read [the introductory post](http://ampersate.com/getting-started-with-broccoli-and-emberjs).
 
-Initially used internally by us.
+Initially used internally by us at [iMedicare](http://imedicare.com).
 Feel free to fork and adapt it.
-Send pull requests if something is broken or one of the features is missing.
+Send pull requests if something is broken or something is missing.
 
 ## Development
 
 You will need Node.js installed first.
 
-We use `nvm` to get Node up and running.
+You can use `nvm` to get Node up and running.
 
-Once set, follow the installation steps:
+Once set, install `ember-cli` globally and the rest of the dependencies.
 
-    $ npm install -g bower
-    $ npm install -g broccoli-cli
-    $ npm install -g testem
+    $ npm install -g ember-cli
     $ npm install
 
 Use `bower.json` to manage third-party dependencies.
 
 ### Conventions
 
-* app - *is where the Ember app lives*
-* bower.json
-* Broccolifile.js - *the build tool configuration*
-* config - *configuration files and environment specific settings go here*
-* package.json - *node dependencies*
-* public - *static files folder, put images & such here*
-* readme.md - *this file*
-* stylesheets - *stylesheets folder, less/css goes here*
-* vendor - *external libraries, also used by bower to cache files*
-
 Inside the `app` folder, you will find an idiomatic Ember application structure.
 
-Use JavaScript ES6 syntax and CoffeeScript to write JavaScript.
+You can use JavaScript ES6 syntax and CoffeeScript to write JavaScript.
 
-Use Less to write CSS.
-
-The application has Twitter Bootstrap framework bundled. Make sure you make use
-of provided widgets and UI components as much as possible.
+You can use Less to write CSS.
+The application has Bootstrap CSS framework bundled. Feel free to use it.
 
 * [Less reference](http://lesscss.org/functions/)
 * [ES6 reference](https://github.com/square/es6-module-transpiler#supported-es6-module-syntax)
 
 ## Usage
 
-Broccoli is our build tool. To run the development server use:
+[Ember CLI](https://github.com/stefanpenner/ember-cli) is our build tool
+(which still uses Broccoli). To run the development server use:
 
-    $ broccoli serve
+    $ ember serve
 
 To build a release, use:
 
-    $ rm -rf dist
-    $ BROCCOLI_ENV=production broccoli build ./dist
+    $ BROCCOLI_ENV=production ember build
+
+This will create a build in the `./dist` folder.
 
 ### Testing
 
 We are using QUnit to write tests.
-Improved Ember.js testing support is provided through [ember-qunit](https://github.com/rpflorence/ember-qunit) package.
+Improved Ember.js testing support is provided through the
+[ember-qunit](https://github.com/rpflorence/ember-qunit) package.
 
-To run the tests change the environment to `test` and run `broccoli`:
+To run the tests change the environment to `test` and run:
 
-    $ BROCCOLI_ENV=test broccoli serve
+    $ BROCCOLI_ENV=test ember serve
 
 Open the browser, QUnit runner should start on its own.
 
-From command line, you can run the tests using `testem`:
+From command line, you can run the:
 
-    $ rm -rf ./build && BROCCOLI_ENV=test broccoli build ./build && testem ci -l phantomjs,firefox
+    $ BROCCOLI_ENV=test ember test
 
 ## TODO
 

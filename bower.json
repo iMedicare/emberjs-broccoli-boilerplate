@@ -6,6 +6,8 @@
     "ember-data": "*",
     "ember-resolver": "*",
     "loader-js": "stefanpenner/loader.js",
+    "ember-load-initializers": "stefanpenner/ember-load-initializers",
+    "ember-cli-shims": "stefanpenner/ember-cli-shims",
     "bootstrap": "3.1.1",
     "qunit": "*",
     "ember-qunit": "*",

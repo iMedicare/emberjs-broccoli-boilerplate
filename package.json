@@ -2,27 +2,27 @@
   "name": "emberjs-broccoli-boilerplate",
   "description": "Ember.js boilerplate using Broccoli",
   "version": "0.0.1",
+  "private": true,
   "author": "Stas Suscov <stas@imedicare.com> (http://github.com/stas)",
   "contributors": [
     "Matthew Johnson <matt@imedicare.com> (https://github.com/mhjohnson)"
   ],
   "license": "MIT",
+  "scripts": {
+    "start": "ember server",
+    "build": "ember build",
+    "test": "ember test"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/stas/emberjs-broccoli-boilerplate"
   },
-  "dependencies": {
-    "broccoli": "*",
+  "devDependencies": {
+    "ember-cli": "*",
     "broccoli-cli": "*",
-    "broccoli-static-compiler": "*",
-    "broccoli-uglify-js": "*",
-    "broccoli-es6-concatenator": "*",
-    "broccoli-template": "*",
+    "broccoli-ember-hbs-template-compiler": "*",
+    "loom-generators-ember-appkit": "^1.1.1",
     "broccoli-coffee": "*",
-    "broccoli-concat": "*",
-    "broccoli-less": "*",
-    "broccoli-merge-trees": "*",
-    "broccoli-bower": "*",
-    "testem": "*"
+    "broccoli-less": "*"
   }
 }
