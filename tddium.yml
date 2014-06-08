@@ -13,7 +13,7 @@
   :firefox: 27.0.1
 
   :hooks:
-    :pre: npm config set strict-ssl false && npm install && ./node_modules/bower/bin/bower -F install
+    :pre: npm config set strict-ssl false && npm install ember-cli && npm install bower && npm install && ./node_modules/bower/bin/bower -F install
 
   :tests:
     - ./node_modules/ember-cli/bin/ember test

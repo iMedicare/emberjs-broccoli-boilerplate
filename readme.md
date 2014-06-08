@@ -1,6 +1,7 @@
 # Ember.js boilerplate using Broccoli
 
-[![Build Status](https://travis-ci.org/iMedicare/emberjs-broccoli-boilerplate.png?branch=master)](https://travis-ci.org/iMedicare/emberjs-broccoli-boilerplate)
+[![Travis CI Status](https://travis-ci.org/iMedicare/emberjs-broccoli-boilerplate.png?branch=master)](https://travis-ci.org/iMedicare/emberjs-broccoli-boilerplate)
+[![SolanoLabs CI Status](https://ci.solanolabs.com:443/Stas/emberjs-broccoli-boilerplate/badges/63297.png)](https://ci.solanolabs.com:443/Stas/emberjs-broccoli-boilerplate/suites/63297)
 
 Read [the introductory post](http://ampersate.com/getting-started-with-broccoli-and-emberjs).
 
