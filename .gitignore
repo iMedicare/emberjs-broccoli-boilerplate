@@ -5,3 +5,4 @@ vendor
 .tddium*
 testem.log
 build
+dist
