@@ -17,7 +17,9 @@ You can use `nvm` to get Node up and running.
 Once set, install `ember-cli` globally and the rest of the dependencies.
 
     $ npm install -g ember-cli
+    $ npm install -g bower
     $ npm install
+    $ bower install -F
 
 Use `bower.json` to manage third-party dependencies.
 
