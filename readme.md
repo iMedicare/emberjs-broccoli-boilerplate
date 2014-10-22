@@ -39,12 +39,12 @@ Inside the `app` folder, you will find an idiomatic Ember application structure.
 
 Use JavaScript ES6 syntax and CoffeeScript to write JavaScript.
 
-Use Less to write CSS.
+Use Sass to write CSS. The default compiler used is the [node-sass](https://github.com/sass/node-sass) variant. If you prefer to use the latest Sass version you will need to replace `broccoli-sass` with `broccoli-ruby-sass` in the Brocfile.js and package.json.
 
 The application has Twitter Bootstrap framework bundled. Make sure you make use
 of provided widgets and UI components as much as possible.
 
-* [Less reference](http://lesscss.org/functions/)
+* [Sass reference](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
 * [ES6 reference](https://github.com/square/es6-module-transpiler#supported-es6-module-syntax)
 
 ## Usage

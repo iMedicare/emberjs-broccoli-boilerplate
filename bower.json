@@ -2,14 +2,14 @@
   "name": "emberjs-broccoli-boilerplate",
   "dependencies": {
     "handlebars": "1.3.0",
-    "ember": "1.5.1",
-    "ember-data": "1.0.0-beta.7",
-    "ember-resolver": "master",
+    "ember": "1.8.0-beta.1",
+    "ember-data": "1.0.0-beta.8",
+    "ember-resolver": "*",
     "loader-js": "git://github.com/stefanpenner/loader.js",
-    "bootstrap": "3.1.1",
-    "qunit": "1.14.0",
-    "ember-qunit": "0.1.7",
-    "jquery-mockjax": "1.5.3",
+    "bootstrap-sass-official": "3.2.0",
+    "qunit": "*",
+    "ember-qunit": "*",
+    "jquery-mockjax": "*",
     "faker": "master"
   }
 }

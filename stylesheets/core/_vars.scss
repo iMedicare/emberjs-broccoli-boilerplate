@@ -1,0 +1,20 @@
+$font-family-base: 'Source Sans Pro', sans-serif;
+$brand-primary: #f23818; // Ember Orange
+$brand-secondary: #faf2ee;
+$white: #fff;
+$text-color: #252525;
+$link-color: $brand-primary;
+
+$navbar-inverse-color: $white;
+$navbar-inverse-bg: $brand-primary;
+
+$navbar-inverse-link-color: $white;
+$navbar-inverse-link-hover-bg: lighten($brand-primary, 5%);
+$navbar-inverse-link-active-bg: darken($navbar-inverse-bg, 5%);
+$navbar-inverse-brand-color: $brand-primary;
+$navbar-inverse-brand-hover-color: $brand-primary;
+$navbar-inverse-brand-hover-bg: $brand-secondary;
+
+$navbar-inverse-toggle-hover-bg:            $navbar-inverse-link-hover-bg;
+$navbar-inverse-toggle-icon-bar-bg:         $white;
+$navbar-inverse-toggle-border-color:        $brand-primary;
