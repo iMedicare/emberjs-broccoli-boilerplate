@@ -5,12 +5,9 @@ node_js:
 
 before_script:
   - npm install -g bower
-  - npm install -g broccoli-cli
-  - npm install -g testem
   - npm install
   - bower -F install
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - BROCCOLI_ENV=test broccoli build ./build
 
-script: testem ci -l phantomjs,firefox
+script: BROCCOLI_ENV=test ./node_modules/broccoli-testem/bin/broccoli-testem
