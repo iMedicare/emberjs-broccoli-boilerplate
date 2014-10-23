@@ -5,7 +5,7 @@
   :headless: true
 
   :nodejs:
-    :version: 0.11.11
+    :version: 0.10.31
 
   :phantomjs:
     :version: 1.9.0
