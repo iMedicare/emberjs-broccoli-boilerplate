@@ -13,7 +13,7 @@
   :firefox: 27.0.1
 
   :hooks:
-    :pre: npm config set strict-ssl false && npm install && npm install bower && ./node_modules/bower/bin/bower -F install && ./node_modules/broccoli-cli/bin/broccoli build ./build
+    :pre: npm config set strict-ssl false && npm install && npm install bower && ./node_modules/bower/bin/bower -F install
 
   :tests:
     - ./node_modules/broccoli-testem/bin/broccoli-testem
