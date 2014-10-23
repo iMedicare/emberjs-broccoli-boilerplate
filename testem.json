@@ -1,5 +1,5 @@
 {
     "framework": "qunit",
-    "cwd": "build/",
-    "test_page": "index.html"
+    "test_page": "index.html",
+    "launch_in_ci": ["Firefox", "phantomjs"]
 }

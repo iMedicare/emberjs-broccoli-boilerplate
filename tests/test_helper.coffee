@@ -1,3 +1,4 @@
+document.write('<link href="/assets/qunit.css" rel="stylesheet">')
 document.write('<script src="/testem.js"></script>')
 document.write('<div id="qunit"></div><div id="qunit-fixture"></div>')
 document.write('<div id="ember-testing-container"><div id="ember-testing"></div></div>')
