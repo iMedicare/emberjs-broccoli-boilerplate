@@ -69,9 +69,10 @@ To run the tests change the environment to `test` and run `broccoli`:
 
 Open the browser, QUnit runner should start on its own.
 
-From command line, you can run the tests using `testem`:
+From the command line you can run the tests using the [broccoli-testem plugin](https://github.com/iMedicare/broccoli-testem):
 
-    $ rm -rf ./build && BROCCOLI_ENV=test broccoli build ./build && testem ci -l phantomjs,firefox
+    $ npm install -g iMedicare/broccoli-testem
+    $ BROCCOLI_ENV=test broccoli-testem
 
 ## TODO
 
