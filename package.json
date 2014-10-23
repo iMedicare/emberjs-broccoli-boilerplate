@@ -23,6 +23,6 @@
     "broccoli-sass": "*",
     "broccoli-merge-trees": "*",
     "broccoli-bower": "*",
-    "testem": "*"
+    "broccoli-testem": "iMedicare/broccoli-testem"
   }
 }

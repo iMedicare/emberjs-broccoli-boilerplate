@@ -16,4 +16,4 @@
     :pre: npm config set strict-ssl false && npm install && npm install bower && ./node_modules/bower/bin/bower -F install && ./node_modules/broccoli-cli/bin/broccoli build ./build
 
   :tests:
-    - ./node_modules/testem/testem.js ci -l phantomjs,firefox
+    - ./node_modules/broccoli-testem/bin/broccoli-testem
