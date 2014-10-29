@@ -1,3 +1,5 @@
+`import DS from 'ember-data'`
+
 Adapter = DS.ActiveModelAdapter.extend
   # API End-point namespace
   namespace: 'api/v1'

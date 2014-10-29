@@ -1,3 +1,5 @@
+`import Ember from 'ember'`
+
 Router = Ember.Router.extend()
 
 Router.map ->

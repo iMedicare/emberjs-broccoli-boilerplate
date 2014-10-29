@@ -96,6 +96,7 @@ var appFilesToAppend = [
   'handlebars/handlebars.js',
   'ember/ember.js',
   'ember-data/ember-data.js',
+  'ember-cli-shims/app-shims.js',
   'ember-resolver/dist/modules/ember-resolver.js',
   'bootstrap-sass-official/assets/javascripts/bootstrap.js'
 ];

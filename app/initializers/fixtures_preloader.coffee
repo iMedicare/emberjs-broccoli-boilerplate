@@ -1,3 +1,6 @@
+`import Ember from 'ember'`
+`import DS from 'ember-data'`
+
 initializer =
   name: 'Fixture Pre-loader'
   after: 'store'
