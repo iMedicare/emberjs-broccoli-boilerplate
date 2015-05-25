@@ -1,12 +1,13 @@
-var mergeTrees              = require('broccoli-merge-trees');
-var findBowerTrees          = require('broccoli-bower');
-var filterCoffeeScript      = require('broccoli-coffee');
-var filterSass              = require('broccoli-sass');
-var filterTemplates         = require('broccoli-template');
-var uglifyJavaScript        = require('broccoli-uglify-js');
-var compileES6              = require('broccoli-es6-concatenator');
-var pickFiles               = require('broccoli-static-compiler');
-var concatFiles             = require('broccoli-concat');
+var mergeTrees = require('broccoli-merge-trees')
+,   findBowerTrees = require('broccoli-bower')
+,   filterCoffeeScript = require('broccoli-coffee')
+,   filterSass = require('broccoli-sass')
+,   autoprefixer = require('broccoli-autoprefixer')
+,   filterTemplates = require('broccoli-template')
+,   uglifyJavaScript = require('broccoli-uglify-js')
+,   compileES6 = require('broccoli-es6-concatenator')
+,   pickFiles = require('broccoli-static-compiler')
+,   concatFiles = require('broccoli-concat');
 
 var bowerTrees = findBowerTrees();
 var env = process.env.BROCCOLI_ENV || 'development';
@@ -19,15 +20,15 @@ var appCss = [];
 
 
 var sassTrees = [
-  'stylesheets',
-  'vendor/bootstrap-sass-official/assets/stylesheets/'
+  'app/styles'
 ];
-var appSass = filterSass(sassTrees, 'app.scss', '/assets/app.css', {
+var appSass = filterSass(sassTrees, 'app.scss', 'assets/styles/app.css', {
   outputStyle: env === 'production' ? 'compressed' : 'expanded',
   sourceMap: env !== 'production'
 });
 
 appCss.push(appSass);
+
 
 
 var testsCss = pickFiles('./vendor/qunit/', {
@@ -51,15 +52,19 @@ var publicTree = 'public';
 //
 // Application
 //
-
 function preprocess(tree) {
+
   tree = filterTemplates(tree, {
     extensions: ['hbs', 'handlebars'],
     compileFunction: 'Ember.Handlebars.compile'
   });
+
+  tree = autoprefixer(tree);
+
   tree = filterCoffeeScript(tree, {
     bare: true
   });
+
   return tree;
 }
 
@@ -97,8 +102,7 @@ var appFilesToAppend = [
   'ember/ember.js',
   'ember-data/ember-data.js',
   'ember-cli-shims/app-shims.js',
-  'ember-resolver/dist/modules/ember-resolver.js',
-  'bootstrap-sass-official/assets/javascripts/bootstrap.js'
+  'ember-resolver/dist/modules/ember-resolver.js'
 ];
 
 var testFilesToAppend = [
@@ -135,7 +139,7 @@ appJs = compileES6(appAndVendorTree, {
   inputFiles: inputFiles,
   legacyFilesToAppend: appFilesToAppend,
   wrapInEval: false,
-  outputFile: '/assets/app.js'
+  outputFile: '/assets/scripts/app.js'
 });
 
 if (env === 'production') {

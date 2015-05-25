@@ -1,0 +1,31 @@
+/**
+ * Input object
+ */
+
+// .Input {}
+
+// Input type
+// or use type attr selector?
+
+.Input--text {
+  padding: $v/6 $h/4;
+  // -webkit-appearance: none;
+}
+
+.Input-hint {
+  @include font-size(14px);
+}
+
+// .Input-select {
+//   margin-right: $h/6;
+// }
+
+// Input size based on number of inputable characters
+
+.Input--size2 {
+  width: $h*2;
+}
+
+.Input--size4 {
+  width: $h*4;
+}

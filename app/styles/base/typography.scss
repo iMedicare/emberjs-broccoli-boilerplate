@@ -1,0 +1,53 @@
+/** @define Typography */
+
+// National
+// @font-face {
+//  font-family: 'national-light';
+//  src: url('fonts/national-light.woff') format('woff');
+// }
+// @font-face {
+//  font-family: 'national-book';
+//  src: url('fonts/national-book.woff') format('woff');
+// }
+// @font-face {
+//  font-family: 'national-medium';
+//  src: url('fonts/national-medium.woff') format('woff');
+// }
+// @font-face {
+//  font-family: 'national-bold';
+//  src: url('fonts/national-bold.woff') format('woff');
+// }
+
+// Franklin Gothic
+
+@font-face {
+  font-family: "franklin-gothic-urw", sans-serif;
+}
+
+// Font stack variable
+$franklin-gothic: "franklin-gothic-urw", sans-serif;
+
+// Convenient extend objects for typography
+%franklin-gothic-book {
+  font-family: $franklin-gothic;
+  font-style: normal;
+  font-weight: 400;
+}
+
+%franklin-gothic-book-italic {
+  font-family: $franklin-gothic;
+  font-style: italic;
+  font-weight: 400;
+}
+
+%franklin-gothic-medium {
+  font-family: $franklin-gothic;
+  font-style: normal;
+  font-weight: 500;
+}
+
+%franklin-gothic-demi {
+  font-family: $franklin-gothic;
+  font-style: normal;
+  font-weight: 700;
+}

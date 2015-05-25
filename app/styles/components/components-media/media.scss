@@ -1,0 +1,61 @@
+/**
+ * Media object
+ */
+
+/**
+ * This uses combined Media versions
+ * Simon Smith's: https://github.com/simonsmith/components-media
+ * and Harry Robert's: https://github.com/csswizardry/inuit.css/blob/master/objects/_media.scss
+ */
+
+// Usage:
+// Note, .Media_body element can't be a <span>
+// <div class="Media">
+//   <img class="Media-object" src="assets/images/checklist-tick.png">
+//   <p class="Media-body">
+//     A medical certificate and a completed Self-Assessment questionaire if you have a health condition, injury or disability that stops you working full-time
+//   </p>
+// </div>
+
+// $media-object-gutter: $h;
+
+/**
+ * Clear floats
+ */
+
+.Media,
+.Media-body {
+  overflow: hidden;
+  // zoom: 1;
+}
+
+/**
+ * For images and video, set to block
+ */
+
+.Media-object img,
+.Media-object video,
+.Media-object iframe {
+  display: block;
+}
+
+/**
+ * Float the object to the left by default
+ */
+
+.Media-object {
+  float: left;
+  // margin-right: $media-object-gutter;
+}
+
+.Media--alignRight .Media-object {
+  float: right;
+  // margin-left: $media-object-gutter;
+}
+
+.Media--centered {
+  display: inline-block;   
+
+  // > div { text-align: left; }
+  > * { text-align: left; }
+}
