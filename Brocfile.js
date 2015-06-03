@@ -19,19 +19,12 @@ var env = process.env.BROCCOLI_ENV || 'development';
 //
 var appCss = [];
 
-<<<<<<< HEAD
+
 var sassTrees = [
   'stylesheets'
 ];
 
 var appSass = filterSass(sassTrees, 'app.scss', '/assets/app.css', {
-=======
-
-var sassTrees = [
-  'app/styles'
-];
-var appSass = filterSass(sassTrees, 'app.scss', 'assets/styles/app.css', {
->>>>>>> 9769e03686fe675feb998da3cade914eb6214594
   outputStyle: env === 'production' ? 'compressed' : 'expanded',
   sourceMap: env !== 'production'
 });
@@ -40,20 +33,6 @@ appCss.push(appSass);
 
 
 
-<<<<<<< HEAD
-=======
-var testsCss = pickFiles('./vendor/qunit/', {
-  srcDir: 'qunit',
-  destDir: 'assets',
-  files: ['qunit.css']
-});
-if (env === 'test') {
-  appCss.push(testsCss);
-}
-
-
-
->>>>>>> 9769e03686fe675feb998da3cade914eb6214594
 //
 // Static
 //
