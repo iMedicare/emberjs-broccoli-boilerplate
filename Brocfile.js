@@ -1,13 +1,14 @@
-var mergeTrees = require('broccoli-merge-trees')
-,   findBowerTrees = require('broccoli-bower')
-,   filterCoffeeScript = require('broccoli-coffee')
-,   filterSass = require('broccoli-sass')
-,   autoprefixer = require('broccoli-autoprefixer')
-,   filterTemplates = require('broccoli-template')
-,   uglifyJavaScript = require('broccoli-uglify-js')
-,   compileES6 = require('broccoli-es6-concatenator')
-,   pickFiles = require('broccoli-static-compiler')
-,   concatFiles = require('broccoli-concat');
+
+var mergeTrees              = require('broccoli-merge-trees');
+var findBowerTrees          = require('broccoli-bower');
+var filterCoffeeScript      = require('broccoli-coffee');
+var filterSass              = require('broccoli-sass');
+var filterTemplates         = require('broccoli-template');
+var uglifyJavaScript        = require('broccoli-uglify-js');
+var compileES6              = require('broccoli-es6-concatenator');
+var pickFiles               = require('broccoli-static-compiler');
+var concatFiles             = require('broccoli-concat');
+
 
 var bowerTrees = findBowerTrees();
 var env = process.env.BROCCOLI_ENV || 'development';
@@ -18,11 +19,19 @@ var env = process.env.BROCCOLI_ENV || 'development';
 //
 var appCss = [];
 
+<<<<<<< HEAD
+var sassTrees = [
+  'stylesheets'
+];
+
+var appSass = filterSass(sassTrees, 'app.scss', '/assets/app.css', {
+=======
 
 var sassTrees = [
   'app/styles'
 ];
 var appSass = filterSass(sassTrees, 'app.scss', 'assets/styles/app.css', {
+>>>>>>> 9769e03686fe675feb998da3cade914eb6214594
   outputStyle: env === 'production' ? 'compressed' : 'expanded',
   sourceMap: env !== 'production'
 });
@@ -31,6 +40,8 @@ appCss.push(appSass);
 
 
 
+<<<<<<< HEAD
+=======
 var testsCss = pickFiles('./vendor/qunit/', {
   srcDir: 'qunit',
   destDir: 'assets',
@@ -42,6 +53,7 @@ if (env === 'test') {
 
 
 
+>>>>>>> 9769e03686fe675feb998da3cade914eb6214594
 //
 // Static
 //
@@ -53,18 +65,13 @@ var publicTree = 'public';
 // Application
 //
 function preprocess(tree) {
-
   tree = filterTemplates(tree, {
     extensions: ['hbs', 'handlebars'],
     compileFunction: 'Ember.Handlebars.compile'
   });
-
-  tree = autoprefixer(tree);
-
   tree = filterCoffeeScript(tree, {
     bare: true
   });
-
   return tree;
 }
 
@@ -139,7 +146,7 @@ appJs = compileES6(appAndVendorTree, {
   inputFiles: inputFiles,
   legacyFilesToAppend: appFilesToAppend,
   wrapInEval: false,
-  outputFile: '/assets/scripts/app.js'
+  outputFile: '/assets/app.js'
 });
 
 if (env === 'production') {

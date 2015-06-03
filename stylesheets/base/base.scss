@@ -1,0 +1,120 @@
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications. Removes the default spacing and border for
+ * appropriate elements.
+ */
+
+/**
+ * box-sizing
+ * 1. https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; // 1
+}
+
+html {
+  // @extend %franklin-gothic-book;
+  background: $base-background;
+  box-sizing: border-box; // 1
+  color: $base-color;
+  font: $base-font;
+  line-height: $base-line-height;
+}
+
+b,
+strong {
+  font-family: "HelveticaNeue-Medium", sans-serif;
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: $base-link-color-hover;
+  text-decoration: underline;
+}
+
+blockquote,
+dl,
+dd,
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+
+button:focus {
+  // scss-lint:disable DuplicateProperty
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  // scss-lint:enable DuplicateProperty
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+iframe {
+  border: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  // margin: 0;
+  padding: 0;
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+
+[tabindex="-1"]:focus {
+  // scss-lint:disable ImportantRule
+  outline: none !important;
+  // scss-lint:enable ImportantRule
+}

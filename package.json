@@ -13,7 +13,6 @@
     "broccoli-coffee": "*",
     "broccoli-concat": "*",
     "broccoli-sass": "*",
-    "broccoli-autoprefixer": "*",
     "broccoli-merge-trees": "*",
     "broccoli-bower": "*"
   }
