@@ -1,0 +1,23 @@
+.u-heading--16 {
+  @include font-size(16px);
+}
+
+.u-heading--18 {
+  @include font-size(18px);
+}
+
+.u-heading--20 {
+  @include font-size(20px);
+}
+
+.u-heading--bold {
+  font-weight: 700;
+}
+
+// .u-heading--serif {
+//   @extend %calluna-regular;
+// }
+
+// .u-heading--sansSerif {
+//   @extend %franklin-gothic-demi;
+// }

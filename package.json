@@ -1,28 +1,19 @@
 {
-  "name": "emberjs-broccoli-boilerplate",
-  "description": "Ember.js boilerplate using Broccoli",
+  "name": "alphero-emberjs-broccoli-boilerplate",
+  "description": "Alphero's Ember.js boilerplate using Broccoli",
   "version": "0.0.1",
-  "author": "Stas Suscov <stas@imedicare.com> (http://github.com/stas)",
-  "contributors": [
-    "Matthew Johnson <matt@imedicare.com> (https://github.com/mhjohnson)"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stas/emberjs-broccoli-boilerplate"
-  },
+  "author": "Alphero (http://alphero.com)",
   "dependencies": {
-    "broccoli": "*",
-    "broccoli-cli": "*",
-    "broccoli-static-compiler": "*",
-    "broccoli-uglify-js": "*",
+    "broccoli": "^0.16.3",
+    "broccoli-cli": "^1.0.0",
+    "broccoli-static-compiler": "^0.2.1",
+    "broccoli-uglify-js": "^0.1.3",
     "broccoli-es6-concatenator": "*",
     "broccoli-template": "*",
     "broccoli-coffee": "*",
     "broccoli-concat": "*",
     "broccoli-sass": "*",
     "broccoli-merge-trees": "*",
-    "broccoli-bower": "*",
-    "broccoli-testem": "iMedicare/broccoli-testem"
+    "broccoli-bower": "*"
   }
 }

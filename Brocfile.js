@@ -1,3 +1,4 @@
+
 var mergeTrees              = require('broccoli-merge-trees');
 var findBowerTrees          = require('broccoli-bower');
 var filterCoffeeScript      = require('broccoli-coffee');
@@ -7,6 +8,7 @@ var uglifyJavaScript        = require('broccoli-uglify-js');
 var compileES6              = require('broccoli-es6-concatenator');
 var pickFiles               = require('broccoli-static-compiler');
 var concatFiles             = require('broccoli-concat');
+
 
 var bowerTrees = findBowerTrees();
 var env = process.env.BROCCOLI_ENV || 'development';
@@ -19,25 +21,15 @@ var appCss = [];
 
 
 var sassTrees = [
-  'stylesheets',
-  'vendor/bootstrap-sass-official/assets/stylesheets/'
+  'stylesheets'
 ];
+
 var appSass = filterSass(sassTrees, 'app.scss', '/assets/app.css', {
   outputStyle: env === 'production' ? 'compressed' : 'expanded',
   sourceMap: env !== 'production'
 });
 
 appCss.push(appSass);
-
-
-var testsCss = pickFiles('./vendor/qunit/', {
-  srcDir: 'qunit',
-  destDir: 'assets',
-  files: ['qunit.css']
-});
-if (env === 'test') {
-  appCss.push(testsCss);
-}
 
 
 
@@ -51,7 +43,6 @@ var publicTree = 'public';
 //
 // Application
 //
-
 function preprocess(tree) {
   tree = filterTemplates(tree, {
     extensions: ['hbs', 'handlebars'],
@@ -97,8 +88,7 @@ var appFilesToAppend = [
   'ember/ember.js',
   'ember-data/ember-data.js',
   'ember-cli-shims/app-shims.js',
-  'ember-resolver/dist/modules/ember-resolver.js',
-  'bootstrap-sass-official/assets/javascripts/bootstrap.js'
+  'ember-resolver/dist/modules/ember-resolver.js'
 ];
 
 var testFilesToAppend = [

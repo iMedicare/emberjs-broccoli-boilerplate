@@ -1,0 +1,72 @@
+/**
+ * Table fixed / fluid combined layout
+ * http://colintoh.com/blog/display-table-anti-hero
+ *
+ * For fixed width and fluid combined, e.g. fixed sidebar width
+ * Use utils-display/display.scss for simple display: table-* classes
+ */
+
+// <div class="Table">
+//   <div class="Table-row">HEADER</div>
+//   <div class="Table">
+//     <div class="Table-cell sidebar">Left-sidebar</div>
+//     <div class="Table-cell">Main Content</div>
+//     <div class="Table-cell sidebar">Right-sidebar</div>
+//   </div>
+//   <div class="Table-row">FOOTER</div>
+// </div>
+
+// or
+
+// <div class="Table">
+//   <div class="Table-cell Table-row--mobile Sidebar">Left-sidebar</div>
+//   <div class="Table-cell Table-row--mobile">Main Content</div>
+// </div>
+
+
+.Table {
+  display: table;
+  width: 100%;
+}
+
+.Table-row {
+  display: table-row;
+  vertical-align: top;
+}
+
+.Table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
+
+// Fixes a text-overflow: ellipsis phenomenon where a child with a truncated, nowrap text, though
+// apparently cropped, still busts out beyond the bounds of the ancestor table-cell
+// <.table-cell> <-- must add .u-maxWidth0 to this
+//   <.u-textEllipsis>
+//     <span>this text is trunca...
+.u-maxWidth0 {
+  max-width: 0;
+}
+
+// @media #{$mobile-only} {
+//   .Table-row--mobile {
+//     display: table-row;
+//   }
+// }
+// @media #{$tablet-only} {
+//   .Table-row--tablet {
+//     display: table-row;
+//   }
+// }
+
+@media #{$tablet-up} {
+  .Table-cell--tabletUp {
+    display: table-cell;
+  }
+}
+
+@media #{$desktop-up} {
+  .Table-cell--desktop {
+    display: table-cell;
+  }
+}

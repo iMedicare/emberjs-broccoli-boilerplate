@@ -1,0 +1,38 @@
+/**
+ * colours
+ *
+ * Note: IE9 requires full hex colour declarations #cccccc, not #ccc
+ * for  css gradients to render correctly)
+ */
+
+// Greys
+$white:    #fff;
+$black:    #000;
+$black-90: #1f1f1f; // (88%)
+$black-80: #333;
+$black-70: #4d4d4d;
+$black-60: #666;
+$black-50: #808080;
+$black-40: #999;
+$black-30: #b3b3b3;
+$black-20: #ccc;
+$black-10: #ddd; // (12%)
+$black-5:  #f2f2f2;
+$black-0:  $white;
+$link:     $black;
+
+/**
+ * Font variables
+ * - used largely as base settings in base.scss – a thin layer on top of normalize.css
+ */
+$base-background: inherit;
+$base-color: $black;
+$base-font-size: 1rem;
+$base-font: $base-font-size "HelveticaNeue-Thin", sans-serif;
+$base-link-color: $link;
+$base-link-color-hover: $base-link-color;
+$base-line-height: 1.5;
+
+// spacing units
+$v: $base-line-height*$base-font-size;  // 1.5rem (= 24px)
+$h: $v;

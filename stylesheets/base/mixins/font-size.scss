@@ -1,0 +1,12 @@
+/**
+ * Font size / line height mixin
+ */
+
+@mixin font-size($font-size: $base-font-size, $line-height: null) {
+  font-size: ($font-size / $base-font-size)*1rem;  // convert px to rem
+  @if $line-height != null {
+    line-height: ($line-height / $font-size);
+  }
+}
+
+// e.g. @include font-size(18px, 22px);

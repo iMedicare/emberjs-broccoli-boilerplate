@@ -1,0 +1,56 @@
+/**
+ * Modal
+ */
+
+.Modal {
+  background-color: rgba($black, 0.5);
+  bottom: 0;
+  // display: none;
+  left: 0;
+  outline: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-overflow-scrolling: touch;
+  z-index: 10;
+  padding: $v $h/2;
+}
+
+.Modal-dialog {
+  background-color: $white;
+  margin-bottom: $v;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  max-width: 35.125rem;  // 562px
+  overflow: hidden;
+  padding: $v/2 $h;
+  position: relative;
+}
+
+.Modal-close {
+  @include font-size(18px, 18px);
+  color: $link;
+  position: absolute;
+  right: $v/2;
+  top: $h/2;
+}
+
+.Modal-body {
+  margin-top: $v; 
+}
+
+.Modal-footer {
+  margin-top: $v;
+
+  // &:before,
+  // &:after {
+  //   display: table;
+  //   content: " ";
+  // }
+
+  // &:after {
+  //   clear: both;
+  // }
+}

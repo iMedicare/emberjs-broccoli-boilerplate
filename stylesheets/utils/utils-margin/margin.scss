@@ -1,0 +1,44 @@
+/**
+ * margin top
+ */
+@mixin margin-and-padding($namespace: "") {
+
+  // * margin top
+  .u-#{$namespace}m-t-0 { margin-top: 0 !important; }
+  .u-#{$namespace}m-t-xs { margin-top: $v/4 !important; }
+  .u-#{$namespace}m-t-sm { margin-top: $v/2 !important; }
+  .u-#{$namespace}m-t-md { margin-top: $v !important; }
+  .u-#{$namespace}m-t-lg { margin-top: $v*1.5 !important; }
+  .u-#{$namespace}m-t-xl { margin-top: $v*2 !important; }
+  .u-#{$namespace}m-t-xx { margin-top: $v*3 !important; }
+}
+
+@include margin-and-padding();
+
+@media #{$mobile-only} {
+  @include margin-and-padding("sm-");
+}
+
+@media #{$tablet-only} {
+  @include margin-and-padding("md-");
+}
+
+@media #{$desktop-up} {
+  @include margin-and-padding("lg-");
+}
+
+// generates:
+//
+// .u-m-t-0 { margin-top: 0; }
+// .u-m-t-xs { margin-top: 4px; }
+// .u-m-t-sm { margin-top: 8px; }
+// .u-m-t-md { margin-top: 16px; }
+// ...
+//
+// @media (min-width: 48em) {
+//     .u-m-t-0-tablet { margin-top: 0; }
+//     .u-m-t-xs-tablet { margin-top: 4px; }
+//     ...
+// }
+//
+// etc...

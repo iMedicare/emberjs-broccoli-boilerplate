@@ -1,0 +1,142 @@
+/**
+ * Calendar
+ */
+
+$calendar-slot-size: 36px;
+$calendar-width: $calendar-slot-size * 7 + 1; // +1px for right border
+$cal-border-color: $black-10;
+
+.Calendar {
+  width: $calendar-width;
+}
+
+// Days of the week do not come with un-calendar
+// so we create our own, and push them below the header
+// ul
+.Calendar-daysOfWeek {
+  background-color: $black-10;
+  position: relative;
+  top: $calendar-slot-size; // move below calendar header
+  // background: $black-5;
+
+  li {
+    @extend b;
+    @include font-size(11px, $calendar-slot-size);
+    float: left;
+    height: $calendar-slot-size;
+    text-align: center;
+    width: $calendar-slot-size;
+  }
+}
+
+// ol
+.un-calendar-month:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.un-calendar-month-container {
+  float: left;
+  padding: 0;
+  user-select: none;
+  width: $calendar-width;
+  
+  header {
+    height: $calendar-slot-size;
+    line-height: $calendar-slot-size;
+    margin-bottom: $calendar-slot-size;
+    margin-top: -$calendar-slot-size; // pull above days-of-week
+    text-align: center;
+  }
+}
+
+.un-calendar-month {
+  border-bottom: 1px solid $cal-border-color;
+  border-right: 1px solid $cal-border-color;
+  margin: 0;
+  padding: 0;
+}
+
+.un-calendar-header {
+  line-height: $calendar-slot-size;
+  margin-top: -$calendar-slot-size; // pull above days-of-week
+  position: relative;
+
+  h1 {
+    text-align: center;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.un-calendar-prev {
+  left: 0;
+}
+
+.un-calendar-next {
+  right: 0;
+}
+
+.un-calendar-prev,
+.un-calendar-next {
+  color: $link;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &:disabled {
+    display: none;
+  }
+}
+
+.un-calendar-today {
+  right: 30px;
+}
+
+.un-calendar-slot {
+  @include font-size(11px, $calendar-slot-size);
+  border-left: 1px solid $cal-border-color;
+  border-top: 1px solid $cal-border-color;
+  box-sizing: border-box;
+  float: left;
+  height: $calendar-slot-size;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: calc(100% / 7);
+
+  &.is-today {
+    @extend b;
+  }
+
+  &.is-selected {
+    background-color: $link;
+    color: $white;
+  }
+
+  &.is-disabled {
+    background-color: $black-20;
+    color: $black;
+    cursor: default;
+  }
+}
+
+.un-calendar-day {
+  cursor: default;
+}
+
+.is-selected {
+  cursor: pointer;
+}
+
+.un-calendar-empty {
+  background-color: $black-5;
+  cursor: default;
+}

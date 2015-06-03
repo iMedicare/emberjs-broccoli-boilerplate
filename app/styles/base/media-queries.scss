@@ -1,0 +1,40 @@
+/**
+ * Media queries
+ */
+
+// Media queries from Foundation framework by ZURB
+// http://foundation.zurb.com/docs/media-queries.html
+
+// RANGES
+// We use these functions to define ranges for various things, like media queries.
+
+@function lower-bound($range) {
+  @if length($range) <= 0 {
+    @return 0;
+  }
+  @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+  @return nth($range, 2);
+}
+
+// Here we define the lower and upper bounds for each media size
+$mobile-range:  (0, 40em);          /* 0, 640px */
+$tablet-range:  (40.0625em, 64em);  /* 641px, 1024px */
+$desktop-range: (64.0625em);        /* 1025px */
+
+// Media Queries
+
+// $landscape: "(orientation: landscape)" !default;
+// $portrait: "(orientation: portrait)" !default;
+
+$mobile-only: "(max-width: #{upper-bound($mobile-range)})" !default;
+$tablet-only: "(min-width: #{lower-bound($tablet-range)}) and (max-width:#{upper-bound($tablet-range)})" !default;
+
+$mobile-up: "(min-width: #{lower-bound($mobile-range)})" !default;
+$tablet-up: "(min-width: #{lower-bound($tablet-range)})" !default;
+$desktop-up: "(min-width: #{lower-bound($desktop-range)})" !default;
